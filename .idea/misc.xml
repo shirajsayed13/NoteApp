@@ -8,16 +8,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.36822916666666666" />
+        <entry key="app/src/main/res/drawable/ic_delete_forever.xml" value="0.36822916666666666" />
+        <entry key="app/src/main/res/drawable/ic_note_add.xml" value="0.36822916666666666" />
+        <entry key="app/src/main/res/drawable/ic_save.xml" value="0.36822916666666666" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.36822916666666666" />
         <entry key="app/src/main/res/drawable/note_background.xml" value="0.30833333333333335" />
+        <entry key="app/src/main/res/drawable/splash_img.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28802083333333334" />
         <entry key="app/src/main/res/layout/fragment_add_note.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/fragment_notes_list.xml" value="0.2708333333333333" />
-        <entry key="app/src/main/res/layout/fragment_update_note.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/layout/fragment_update_note.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/menu/add_note_menu.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/menu/notes_list_menu.xml" value="0.28802083333333334" />
+        <entry key="app/src/main/res/menu/update_note_menu.xml" value="0.28802083333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

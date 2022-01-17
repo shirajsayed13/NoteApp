@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/priority_color_view"
+            android:id="@+id/tv_edited"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/note_background"
@@ -41,13 +41,14 @@
             android:id="@+id/title_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:text="@string/title"
             android:textColor="@color/dark_grey"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/priority_color_view" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_edited" />
 
         <TextView
             android:id="@+id/content_tv"
@@ -75,6 +76,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/content_tv"
             app:layout_constraintVertical_bias="0" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivNoteImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:elevation="1dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RoundCornerImageViewShape" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

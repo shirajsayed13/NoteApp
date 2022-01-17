@@ -7,7 +7,7 @@
     tools:context="ui.notes_list.NotesListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notes_list_rv"
+        android:id="@+id/rv_notes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
@@ -48,7 +48,7 @@
         app:lottie_rawRes="@raw/animation" />
 
     <TextView
-        android:id="@+id/empty_notes_tv"
+        android:id="@+id/tv_empty_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

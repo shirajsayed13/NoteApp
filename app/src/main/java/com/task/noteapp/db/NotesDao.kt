@@ -7,6 +7,9 @@ import com.task.noteapp.models.Note
 @Dao
 interface NotesDao {
 
+    @Query("SELECT * FROM notes_table ORDER by date DESC")
+    fun getAllNotes(): LiveData<List<Note>>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertNote(note: Note)
 
@@ -16,7 +19,7 @@ interface NotesDao {
     @Delete
     suspend fun deleteNote(note: Note)
 
-    @Query("SELECT * FROM notes ORDER by date DESC")
-    fun getAllNotes(): LiveData<List<Note>>
+    @Query("DELETE FROM notes_table")
+    suspend fun deleteAllNotes()
 
 }

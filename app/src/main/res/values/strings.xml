@@ -11,4 +11,11 @@
     <string name="delete_note">Delete Note</string>
     <string name="update_note">Update Note</string>
     <string name="notes_are_empty">Notes are empty</string>
+    <string name="noted_added">Successfully added note</string>
+    <string name="fill_all_fields">Please fill in the fields!</string>
+    <string name="delete_everything">Delete everything?</string>
+    <string name="delete_confirmation">Are you sure you want to delete everything? This cannot be undone.</string>
+    <string name="deleted_successfully">Successfully deleted!!</string>
+    <string name="updated_successfully">Successfully updated note</string>
+    <string name="image_url">Image Url</string>
 </resources>

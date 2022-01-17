@@ -8,7 +8,7 @@
     tools:context=".ui.update_note.UpdateNoteFragment">
 
     <EditText
-        android:id="@+id/update_title_et"
+        android:id="@+id/et_update_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -27,7 +27,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/update_content_et"
+        android:id="@+id/et_image_url"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="@string/image_url"
+        android:importantForAutofill="no"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_update_title" />
+
+    <EditText
+        android:id="@+id/et_update_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -43,6 +61,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_title_et" />
+        app:layout_constraintTop_toBottomOf="@+id/et_image_url" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
