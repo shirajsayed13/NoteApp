@@ -9,3 +9,9 @@ internal fun Fragment.showToastMessage(message: Int) {
     Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
 }
 
+fun ShapeableImageView.loadImageUrl(imageUrl: String?) {
+    Glide.with(this)
+        .load(imageUrl)
+        .centerCrop()
+        .into(this)
+}

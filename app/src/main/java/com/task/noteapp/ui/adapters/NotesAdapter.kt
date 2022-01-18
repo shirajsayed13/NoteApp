@@ -1,6 +1,5 @@
 package com.task.noteapp.ui.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
@@ -12,6 +11,7 @@ import com.task.noteapp.models.Note
 import com.task.noteapp.ui.notes_list.NotesListFragmentDirections
 import com.task.noteapp.util.NotesDiffUtil
 import com.task.noteapp.util.TimeUtil
+import com.task.noteapp.util.loadImageUrl
 import javax.inject.Inject
 
 class NotesAdapter : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
@@ -23,11 +23,14 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
 
     class ViewHolder(private val itemNoteBinding: ItemNoteBinding) :
         RecyclerView.ViewHolder(itemNoteBinding.root) {
-        fun bind(note: Note, context: Context) {
+        fun bind(note: Note) {
             itemNoteBinding.apply {
                 titleTv.text = note.title
                 contentTv.text = note.content
                 dateTv.text = TimeUtil.getDateFormat(note.date)
+                val imageUrl =
+                    if (note.imageUrl.isNotEmpty()) note.imageUrl else "https://picsum.photos/seed/picsum/200/300"
+                ivNoteImage.loadImageUrl(imageUrl)
                 noteItemLayout.setOnClickListener {
                     val action =
                         NotesListFragmentDirections.toUpdateNoteFragment(note)
@@ -47,7 +50,7 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val note = listOfNotes[position]
-        holder.bind(note, holder.itemView.context)
+        holder.bind(note)
     }
 
     fun setNotesList(newListOfNotes: List<Note>) {
