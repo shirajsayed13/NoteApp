@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.task.noteapp.R
 import com.task.noteapp.databinding.FragmentAddNoteBinding
 import com.task.noteapp.models.Note
+import com.task.noteapp.ui.Validator
 import com.task.noteapp.ui.viewmodels.NotesViewModel
 import com.task.noteapp.util.TimeUtil
 import com.task.noteapp.util.showToastMessage
@@ -48,7 +49,7 @@ class AddNoteFragment : Fragment() {
         val titleText = binding.etTitle.text.toString()
         val contentText = binding.etContent.text.toString()
         val imageUrl = binding.etImageUrl.text.toString()
-        if (notesViewModel.noteIsValid(titleText, contentText)) {
+        if (Validator.validateInput(titleText, contentText)) {
             val note = Note(
                 0,
                 titleText,

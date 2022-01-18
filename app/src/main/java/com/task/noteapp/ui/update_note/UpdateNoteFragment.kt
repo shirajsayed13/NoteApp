@@ -11,6 +11,7 @@ import androidx.navigation.fragment.navArgs
 import com.task.noteapp.R
 import com.task.noteapp.databinding.FragmentUpdateNoteBinding
 import com.task.noteapp.models.Note
+import com.task.noteapp.ui.Validator
 import com.task.noteapp.ui.viewmodels.NotesViewModel
 import com.task.noteapp.util.TimeUtil
 import com.task.noteapp.util.showToastMessage
@@ -81,7 +82,7 @@ class UpdateNoteFragment : Fragment() {
         val titleText = binding.etUpdateTitle.text.toString()
         val contentText = binding.etUpdateContent.text.toString()
         val imageUrl = binding.etImageUrl.text.toString()
-        if (notesViewModel.noteIsValid(titleText, contentText)) {
+        if (Validator.validateInput(titleText, contentText)) {
             val note = Note(
                 args.currentNote.id,
                 titleText,
