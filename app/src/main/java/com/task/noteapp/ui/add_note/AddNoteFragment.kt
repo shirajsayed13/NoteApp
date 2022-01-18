@@ -55,6 +55,7 @@ class AddNoteFragment : Fragment() {
                 imageUrl,
                 contentText,
                 TimeUtil.getCurrentTime(),
+                false
             )
             notesViewModel.insertNote(note)
             showToastMessage(R.string.noted_added)

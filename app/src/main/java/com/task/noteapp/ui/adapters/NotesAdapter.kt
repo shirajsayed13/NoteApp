@@ -1,6 +1,7 @@
 package com.task.noteapp.ui.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
@@ -28,6 +29,9 @@ class NotesAdapter : RecyclerView.Adapter<NotesAdapter.ViewHolder>() {
                 titleTv.text = note.title
                 contentTv.text = note.content
                 dateTv.text = TimeUtil.getDateFormat(note.date)
+                if (note.noteEdited)
+                    tvEdited.visibility = View.VISIBLE
+                else tvEdited.visibility = View.GONE
                 val imageUrl =
                     if (note.imageUrl.isNotEmpty()) note.imageUrl else "https://picsum.photos/seed/picsum/200/300"
                 ivNoteImage.loadImageUrl(imageUrl)

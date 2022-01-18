@@ -88,6 +88,7 @@ class UpdateNoteFragment : Fragment() {
                 imageUrl,
                 contentText,
                 TimeUtil.getCurrentTime(),
+                true
             )
             notesViewModel.updateNote(note)
             showToastMessage(R.string.updated_successfully)

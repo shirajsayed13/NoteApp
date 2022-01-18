@@ -7,7 +7,7 @@ import com.task.noteapp.models.Note
 
 @Database(
     entities = [Note::class],
-    version = 2
+    version = 3
 )
 abstract class NotesDatabase : RoomDatabase() {
 

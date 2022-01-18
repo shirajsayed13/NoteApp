@@ -14,4 +14,5 @@ data class Note(
     var imageUrl: String,
     var content: String,
     var date: Long,
+    val noteEdited: Boolean
 ) : Parcelable
