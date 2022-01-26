@@ -2,9 +2,9 @@
 
 This app has be build using:
 
-100% Kotlin
-MVVM
-Hilt for DI
+#100% Kotlin
+#MVVM
+#Hilt for DI
 Navigation Component
 Coroutines
 ViewBinding for binding
